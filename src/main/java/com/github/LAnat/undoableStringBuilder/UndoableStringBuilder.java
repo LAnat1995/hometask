@@ -2,13 +2,14 @@ package com.github.LAnat.undoableStringBuilder;
 
 import lombok.Getter;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 @Getter
 public class UndoableStringBuilder {
     private char[] value = new char[16];
     private int count;
-    private Stack<UndoableStringBuilderSnapshot> history = new Stack<>();
+    private Deque<UndoableStringBuilderSnapshot> history = new ArrayDeque<>();
 
     public UndoableStringBuilder() {
         saveSnapshot(); //for all constructors
