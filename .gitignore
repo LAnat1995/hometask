@@ -1,16 +1,15 @@
+### Build ###
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea/
 *.iws
 *.iml
 *.ipr
+out/
 
 ### Eclipse ###
 .apt_generated
@@ -34,5 +33,44 @@ build/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
+### Logs ###
+*.log
+logs/
+spring.log
+
+### Environment / Secrets ###
+.env
+.env.*
+!.env.example
+*.local.yml
+application-local.yml
+application-secret.yml
+
+### JVM ###
+hs_err_pid*
+replay_pid*
+*.hprof
+
+### Kafka / Zookeeper (local) ###
+kafka-data/
+kafka-logs/
+zookeeper-data/
+kafka_2.13-*/
+
+### Docker ###
+*.pid
+docker-compose.override.yml
+
+### Temp ###
+*.tmp
+*.bak
+*.swp
+*~
+
+### OS ###
 .DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.directory
